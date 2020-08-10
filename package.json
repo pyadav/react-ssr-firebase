@@ -1,0 +1,44 @@
+{
+    "name": "react-ssr-firebase",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server public",
+        "start:dev": "webpack-dev-server",
+        "babel": "babel src -d functions/src && babel index.js -d functions",
+        "build:client": "webpack --mode production --config ./webpack.client.js",
+        "build": "npm run build:client && npm run babel",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pyadav/react-ssr-firebase.git"
+    },
+    "author": "Praveen Yadav<pyadav9678@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pyadav/react-ssr-firebase/issues"
+    },
+    "homepage": "https://github.com/pyadav/react-ssr-firebase#readme",
+    "dependencies": {
+        "http-server": "^0.12.3",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.1",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/preset-react": "^7.10.4",
+        "babel-loader": "^8.1.0",
+        "firebase-admin": "^9.0.0",
+        "firebase-functions": "^3.9.0",
+        "firebase-tools": "^8.7.0",
+        "html-webpack-plugin": "^4.3.0",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-node-externals": "^2.5.1"
+    }
+}
