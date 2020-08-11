@@ -31,12 +31,9 @@ var app = (0, _express["default"])();
 app.get("**", function (req, res) {
   var _req$query$name = req.query.name,
       name = _req$query$name === void 0 ? "Praveen" : _req$query$name;
-  console.log("\n name value \n", name);
-  console.log(">>", finalHtml);
   var html = (0, _server.renderToString)( /*#__PURE__*/_react["default"].createElement(_App["default"], {
     name: name
   }));
-  var finalHtml = index.replace("<!-- ::APP:: -->", html);
   res.set("Cache-Control", "public, max-age=600, s-maxage=1200");
   res.send(finalHtml);
 });

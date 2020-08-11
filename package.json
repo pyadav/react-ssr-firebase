@@ -6,9 +6,9 @@
     "scripts": {
         "start": "http-server public",
         "start:dev": "webpack-dev-server",
-        "babel": "babel src -d functions/src && babel index.js -d functions",
         "build:client": "webpack --mode production --config ./webpack.client.js",
-        "build": "npm run build:client && npm run babel",
+        "build:server": "babel src -d functions/src && babel index.js -d functions",
+        "build": "npm run build:client && npm run build:server",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

@@ -20,3 +20,9 @@ $ firebase init functions
 ```
 $ firebase serve --only functions,hosting
 ```
+
+### Deploy
+
+```
+$ firebase deploy
+```
